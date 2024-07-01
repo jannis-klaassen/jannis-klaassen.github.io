@@ -1,9 +1,11 @@
+/* || Variables */
 :root {
   /* Theme colors */
   --blue: #152651;
 }
 
 
+/* || CSS Reset */
 html, body {
     min-height: 100vh;
     margin: 0;
