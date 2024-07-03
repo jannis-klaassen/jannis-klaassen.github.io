@@ -1,7 +1,7 @@
 /* || Variables */
 :root {
-  /* Theme colors */
-  --blue: #152651;
+    /* Theme colors */
+    --blue: #152651;
 }
 
 
@@ -129,4 +129,47 @@ nav a {
 .skill-bar progress::-webkit-progress-value {
     background: var(--blue);
     border-radius: 1rem;
+}
+
+
+/* || About */
+
+
+/* || Projects */
+
+
+/* || Contact */
+form {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 30rem;
+}
+
+input, textarea {
+    margin: 1rem 0;
+    padding: 6px 12px;
+
+    font-family: Roboto Slab, sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    border: none;
+    border-radius: 0.5rem;
+}
+
+button {
+    margin: 1rem auto;
+    padding: 0.5rem 1.5rem;
+
+    background: var(--blue);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-family: Roboto Slab, sans-serif;
+    font-size: 18px;
+}
+
+button:hover {
+    background: #223d80;
 }
