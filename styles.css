@@ -13,6 +13,8 @@ html, body {
 
     background: linear-gradient(180deg, #D1FAFF, #1a67da);
     font-family: Roboto Slab, sans-serif;
+
+    scroll-behavior: smooth;
 }
 
 
@@ -25,68 +27,23 @@ html, body {
     margin: 2rem;
 }
 
-
-/* || Info Panel */
-.icon-label {
-    display: flex;
-    align-items: center;
-    margin: 1rem 0;
-    gap: 1rem;
+.segment {
+    padding: 1rem;
 }
 
-.info-personal {
-    margin: 3rem 1rem;
-}
-
-.info-panel {
-    display: flex;
-    width: fit-content;
-    max-width: 1500px;
-    margin: 5rem auto;
-    padding: 2rem;
-
-    background: white;
-    border-radius: 0.7rem;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-}
-
-.info-portrait {
-    width: 400px;
-    border-radius: 0.5rem;
- }
-
-.info-text span {
-    color: var(--blue);
+.segment h1 {
     font-size: 3rem;
-}
-
-.info-skills {
-    margin-top: 2rem;
-}
-
-.skill-bar {
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 0.5rem;
-}
-
-.skill-bar progress {
-    width: 75%;
-    background: white;
-}
-
-.skill-bar progress::-webkit-progress-bar {
-    background: lightgray;
-    border-radius: 1rem;
-}
-
-.skill-bar progress::-webkit-progress-value {
-    background: var(--blue);
-    border-radius: 1rem;
+    text-align: center;
 }
 
 
 /* || Navbar */
+header {
+    align-self: flex-start;
+    position: sticky;
+    top: 0;
+}
+
 nav {
     display: flex;
     align-items: center;
@@ -112,4 +69,64 @@ nav a {
 
 .navbar-title {
     font-size: 42px;
+}
+
+
+/* || Introduction */
+.icon-label {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    gap: 1rem;
+}
+
+.intro-personal {
+    margin: 3rem 1rem;
+}
+
+.intro {
+    display: flex;
+    width: fit-content;
+    max-width: 1500px;
+    margin: 5rem auto;
+    padding: 2rem;
+
+    background: white;
+    border-radius: 0.7rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.intro-portrait {
+    width: 400px;
+    border-radius: 0.5rem;
+ }
+
+.intro-text span {
+    color: var(--blue);
+    font-size: 3rem;
+}
+
+.intro-skills {
+    margin-top: 2rem;
+}
+
+.skill-bar {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0.5rem;
+}
+
+.skill-bar progress {
+    width: 75%;
+    background: white;
+}
+
+.skill-bar progress::-webkit-progress-bar {
+    background: lightgray;
+    border-radius: 1rem;
+}
+
+.skill-bar progress::-webkit-progress-value {
+    background: var(--blue);
+    border-radius: 1rem;
 }
