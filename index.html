@@ -14,10 +14,11 @@
   <header>
     <!--  NAVBAR  -->
     <nav class="navbar">
-      <a href="index.html" class="navbar-title">Portfolio</a>
+      <a href="index.html" class="navbar-title">&lt; Jannis Klaassen /&gt;</a>
       <div class="navbar-pages">
         <a href="#about">About</a>
-        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <!-- <a href="#projects">Projects</a> -->
         <a href="#contact">Contact</a>
       </div>
     </nav>
@@ -29,24 +30,6 @@
       <div class="container">
         <!-- Portrait -->
         <img class=intro-portrait src="images/portrait.jpg" alt="Jannis Klaassen">
-
-        <!-- Personal Info -->
-        <div class="intro-personal">
-          <div class="icon-label">
-            <img id="globe-icon" src="images/icons/globe.svg" alt="Icon">
-            <label for="globe-icon">Berlin, Germany</label>
-          </div>
-
-          <div class="icon-label">
-            <img id="date-icon" src="images/icons/date.svg" alt="Icon">
-            <label for="date-icon">30th August 1997</label>
-          </div>
-
-          <div class="icon-label">
-            <img id="mail-icon" src="images/icons/mail.svg" alt="Icon">
-            <label for="mail-icon">jannis.klaassen@gmail.com</label>
-          </div>
-        </div>
       </div>
 
       <div class="container">
@@ -56,14 +39,42 @@
             HELLO EVERYONE, I AM <br>
             <span>JANNIS KLAASSEN</span>
           </p>
-          <p class="bold">JUNIOR SOFTWARE DEVELOPER</p>
+          <p class="bold">SOFTWARE DEVELOPER</p>
           <p>I am currently working at Charité Berlin as a Full-Stack Developer.
           </p>
         </div>
 
-        <!-- Skills -->
-        <div class="intro-skills">
-          <h3>Skills</h3>
+        <!-- Socials -->
+        <!-- Icons from https://icon-icons.com -->
+        <div class="intro-socials">
+          <a href="mailto:jannis.klaassen@gmail.com" target="_blank"><img src="images/icons/gmail.svg" alt="Gmail"></a>
+          <a href="https://github.com/jannis-klaassen" target="_blank"><img src="images/icons/github.svg" alt="Github"></a>
+          <a href="https://www.linkedin.com/in/jannis-klaassen/" target="_blank"><img src="images/icons/linkedin.svg" alt="LinkedIn"></a>
+        </div>
+      </div>
+    </div>
+
+
+    <!--  ABOUT  -->
+    <div class="segment" id="about">
+      <h1>About Me</h1>
+
+      <div class="about-text">
+        <p>I am a self-taught software developer with a background in game development. My journey as a developer began with automating repetitive tasks at work, sparking my interest in coding.</p>
+        <p>I have honed my skills and become proficient in numerous programming languages and tools through various courses and hands-on projects, embracing full-stack development. My curiosity and enthusiasm for learning have been key to my growth, as I have continuously sought out new challenges and opportunities to expand my skill set.</p>
+        <p>I am highly motivated and always eager to learn new things, constantly seeking out new challenges and opportunities to grow. My goal is to deliver high-quality, user-focused solutions in every project I undertake.</p>
+      </div>
+    </div>
+
+
+    <!--  SKILLS  -->
+    <div class="segment" id="skills">
+      <h1>Skills</h1>
+
+      <div class="skills">
+        <!-- Technical Skills -->
+        <div class="skill-set">
+          <h3>Technical Skills</h3>
 
           <div class="skill-bar">
             <label for="progress-c">C</label>
@@ -95,23 +106,53 @@
             <progress id="progress-xml" max="100" value="90"></progress>
           </div>
         </div>
+
+        <!-- Soft skills -->
+        <div class="skill-set">
+          <h3>Soft skills</h3>
+          <div class="skill-bar">
+            <label for="progress-analytical">Analytical</label>
+            <progress id="progress-analytical" max="100" value="95"></progress>
+          </div>
+
+
+          <div class="skill-bar">
+            <label for="progress-communication">Communication</label>
+            <progress id="progress-communication" max="100" value="90"></progress>
+          </div>
+
+          <div class="skill-bar">
+            <label for="progress-creativity">Creativity</label>
+            <progress id="progress-creativity" max="100" value="70"></progress>
+          </div>
+
+          <div class="skill-bar">
+            <label for="progress-problem-solving">Problem Solving</label>
+            <progress id="progress-problem-solving" max="100" value="90"></progress>
+          </div>
+
+          <div class="skill-bar">
+            <label for="progress-self-suffiency">Self-Suffiency</label>
+            <progress id="progress-self-suffiency" max="100" value="85"></progress>
+          </div>
+
+          <div class="skill-bar">
+            <label for="progress-teamwork">Teamwork</label>
+            <progress id="progress-teamwork" max="100" value="50"></progress>
+          </div>
+        </div>
       </div>
     </div>
 
 
-    <!--  ABOUT  -->
-    <div class="segment" id="about">
-      <h1>About Me</h1>
-    </div>
-
     <!--  PROJECTS  -->
-    <div class="segment" id="projects">
+    <!-- <div class="segment" id="projects">
       <h1>Projects</h1>
-    </div>
+    </div> -->
 
     <!--  CONTACT  -->
     <div class="segment" id="contact">
-      <h1>Contact</h1>
+      <h1>Contact Me</h1>
 
       <form action="https://formsubmit.co/12c21c3fc121231fb54933380454cde5 " method="POST">
         <input name="name" placeholder="Name" type="text" autocomplete="off">
