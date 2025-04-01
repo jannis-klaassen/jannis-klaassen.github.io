@@ -238,6 +238,11 @@ nav a {
     font-size: 1.2rem;
 }
 
+.flip-card-back p {
+    line-height: 1.7;
+    word-wrap: break-word;
+}
+
 .flip-card-frame, .flip-card-front, .flip-card-back, .flip-card-front > img {
     height: 100%;
     width: 100%;
