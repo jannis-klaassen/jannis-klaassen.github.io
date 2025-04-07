@@ -60,23 +60,47 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 1rem;
 
     background: var(--blue);
     box-shadow: darkgray 0.5px 0.5px 0.5px;
 }
 
 nav a {
-    padding: 1rem;
-
-    font-size: 32px;
+    position: relative;
+    margin: 0.5rem;
+    transition: color 0.2s ease;
+    
     color: white;
+    font-size: 24px;
     text-decoration: none;
 }
 
-.navbar-pages {
-    display: flex;
-    gap: 1rem;
+nav a::before,
+nav a::after {
+    opacity: 0;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+nav a::before {
+    content: "<";
+    left: -1ch;
+    transform: translateX(-5px);
+}
+
+nav a::after {
+    content: "/>";
+    right: -1ch;
+    transform: translateX(5px);
+}
+
+nav a:hover::before,
+nav a:hover::after {
+    opacity: 1;
+}
+
+.navbar-title {
+    margin-left: 2rem;
+    font-size: 32px;
 }
 
 
