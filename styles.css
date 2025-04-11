@@ -5,16 +5,21 @@
 
 
 /* || CSS Reset */
-html, body {
-    min-height: 100vh;
+html,
+body {
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
 
     background: linear-gradient(180deg, #D1FAFF, #1a67da);
     font-family: Roboto Slab, sans-serif;
     font-size: 16px;
+}
 
-    scroll-behavior: smooth;
+img {
+    display: block;
+    max-width: 100%;
 }
 
 
@@ -24,7 +29,7 @@ html, body {
 }
 
 .container {
-    margin: 2rem;
+    margin: 2rem auto;
 }
 
 .hidden {
@@ -56,45 +61,46 @@ header {
     z-index: 1000;
 }
 
-nav {
+.navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 
     background: var(--blue);
     box-shadow: darkgray 0.5px 0.5px 0.5px;
 }
 
-nav a {
+.navbar a {
     position: relative;
     margin: 0.5rem;
     transition: color 0.2s ease;
-    
+
     color: white;
     font-size: 24px;
     text-decoration: none;
 }
 
-nav a::before,
-nav a::after {
+.navbar a::before,
+.navbar a::after {
     opacity: 0;
     transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
-nav a::before {
+.navbar a::before {
     content: "<";
     left: -1ch;
     transform: translateX(-5px);
 }
 
-nav a::after {
+.navbar a::after {
     content: "/>";
     right: -1ch;
     transform: translateX(5px);
 }
 
-nav a:hover::before,
-nav a:hover::after {
+.navbar a:hover::before,
+.navbar a:hover::after {
     opacity: 1;
 }
 
@@ -133,6 +139,10 @@ nav a:hover::after {
     border-radius: 0.5rem;
 }
 
+.intro-socials {
+    display: flex;
+}
+
 .intro-socials img {
     -webkit-transform: scale(1);
 }
@@ -143,6 +153,10 @@ nav a:hover::after {
 
 .intro-socials a + a {
     margin-left: 2rem;
+}
+
+.intro-text {
+    text-wrap: wrap;
 }
 
 .intro-text span {
@@ -172,7 +186,7 @@ nav a:hover::after {
     margin: auto;
     width: 40%;
 }
-  
+
 .skill {
     margin-bottom: 1.5rem;
 }
@@ -189,7 +203,7 @@ nav a:hover::after {
     transform: translateZ(0);
     transition: transform 0.3s ease;
     will-change: transform;
-    
+
     background: white;
     border-radius: 1rem;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -223,6 +237,7 @@ nav a:hover::after {
     0% {
         left: -50%;
     }
+
     100% {
         left: 100%;
     }
@@ -276,6 +291,7 @@ nav a:hover::after {
 
 .flip-card-set {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .flip-card {
@@ -317,7 +333,10 @@ nav a:hover::after {
     word-wrap: break-word;
 }
 
-.flip-card-frame, .flip-card-front, .flip-card-back, .flip-card-front > img {
+.flip-card-frame,
+.flip-card-front,
+.flip-card-back,
+.flip-card-front>img {
     height: 100%;
     width: 100%;
     border-radius: 2rem;
@@ -329,10 +348,11 @@ form {
     display: flex;
     flex-direction: column;
     margin: auto;
-    width: 30rem;
+    max-width: 50%;
 }
 
-input, textarea {
+input,
+textarea {
     margin: 1rem 0;
     padding: 6px 12px;
 
