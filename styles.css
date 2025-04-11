@@ -109,24 +109,39 @@ header {
     font-size: 32px;
 }
 
+.menu-toggle {
+    display: none;
+    margin: 1rem;
+    padding: 0;
+
+    background: none;
+    box-shadow: none;
+    font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .navbar-pages {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar-pages.active {
+        display: flex;
+
+        background-color: #223b79;
+    }
+}
+
 
 /* || Introduction */
-.icon-label {
-    display: flex;
-    align-items: center;
-    margin: 1rem 0;
-    gap: 1rem;
-}
-
-.intro-personal {
-    margin: 3rem 1rem;
-}
-
 .intro {
     display: flex;
-    width: fit-content;
     margin: 5rem auto;
-    padding: 2rem;
 
     background: white;
     border-radius: 0.7rem;
@@ -151,7 +166,7 @@ header {
     -webkit-transform: scale(1.2);
 }
 
-.intro-socials a + a {
+.intro-socials a+a {
     margin-left: 2rem;
 }
 
@@ -306,7 +321,7 @@ header {
     transform-style: preserve-3d;
 }
 
-.flip-card:hover > .flip-card-frame {
+.flip-card:hover>.flip-card-frame {
     cursor: pointer;
     transform: rotateY(180deg);
 }

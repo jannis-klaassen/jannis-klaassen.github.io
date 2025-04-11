@@ -1,3 +1,15 @@
+// Navbar responsive menu button
+document.addEventListener("DOMContentLoaded", () => {
+    const toggleButton = document.querySelector(".menu-toggle");
+    const navbarPages = document.querySelector(".navbar-pages");
+
+    toggleButton.addEventListener("click", () => {
+        navbarPages.classList.toggle("active");
+    });
+});
+
+
+
 // Animate skill bars 
 document.addEventListener("DOMContentLoaded", () => {
     const fills = document.querySelectorAll(".fill");
