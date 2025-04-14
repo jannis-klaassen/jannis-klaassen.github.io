@@ -141,6 +141,7 @@ header {
     justify-content: center;
     align-items: center;
     margin: 5rem auto;
+    max-width: 90%;
 }
 
 .intro-portrait {
@@ -195,7 +196,7 @@ header {
 
 .about-text {
     margin: auto;
-    padding: 2rem;
+    max-width: 90%;
 }
 
 
@@ -207,11 +208,9 @@ header {
 
 .skill-set {
     margin: auto;
-    padding: 2rem;
+    padding: 1rem;
     width: 600px;
     max-width: 90%;
-
-    border: 1px solid white;
 }
 
 .skill {
@@ -306,24 +305,26 @@ header {
     cursor: pointer;
 }
 
-
-/* || Interests */
-.interest-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    margin-bottom: 5rem;
+@media (max-width: 768px) {
+    .project {
+        margin: 1rem;
+        padding: 1rem;
+    }
 }
 
-.flip-card-set {
+
+/* || Interests */
+.interests {
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
+    max-width: 100%;
 }
 
 .flip-card {
-    width: 20rem;
-    height: 30rem;
+    aspect-ratio: 2/3;
+    width: 320px;
     margin: 2rem;
     perspective: 800px;
 }
@@ -363,10 +364,23 @@ header {
 .flip-card-frame,
 .flip-card-front,
 .flip-card-back,
-.flip-card-front>img {
+.flip-card-front > img {
     height: 100%;
     width: 100%;
     border-radius: 2rem;
+}
+
+@media (max-width: 768px) {
+    .flip-card {
+        margin: 1rem;
+    }
+
+    .flip-card-back {
+        padding: 1rem;
+        
+        line-height: 1.5;
+        font-size: 1rem;
+    }
 }
 
 
@@ -374,8 +388,9 @@ header {
 form {
     display: flex;
     flex-direction: column;
-    margin: auto;
-    max-width: 50%;
+    margin: auto; 
+    width: 40rem;
+    max-width: 90%;
 }
 
 input,
