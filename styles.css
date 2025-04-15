@@ -263,7 +263,7 @@ header {
 }
 
 .skill {
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 .skill label {
@@ -273,19 +273,21 @@ header {
 
 .bar {
     width: 100%;
-    height: 20px;
+    height: 2rem;
+    scale: 97%;
+    position: relative;
+    right: 10px;
     overflow: hidden;
-    transform: translateZ(0);
     transition: transform 0.3s ease;
     will-change: transform;
 
     background: white;
-    border-radius: 1rem;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 5px 5px 10px;
 }
 
 .bar:hover {
-    transform: scale(1.02);
+    scale: 100%;
 }
 
 .fill {
@@ -295,7 +297,6 @@ header {
     transition: width 1s ease-out;
 
     background: linear-gradient(to right, var(--blue), rgb(32, 101, 190));
-    border-radius: 1rem;
 }
 
 .bar:hover .fill::after {
