@@ -31,8 +31,26 @@ img {
     font-weight: bold;
 }
 
-.hidden {
-    display: none;
+.popout {
+    opacity: 0;
+    transform: scale(0);
+}
+
+.popout-animation {
+    animation: popout 1s ease;
+    -webkit-animation: popout 1s ease;
+}
+
+@keyframes popout {
+    from {transform:scale(0)}
+    80% {transform:scale(1.05)}
+    to {transform:scale(1)}
+}
+
+@-webkit-keyframes popout {
+    from {-webkit-transform:scale(0)}
+    80% {-webkit-transform:scale(1.05)}
+    to {-webkit-transform:scale(1)}
 }
 
 .segment {
