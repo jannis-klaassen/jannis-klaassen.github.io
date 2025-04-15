@@ -9,10 +9,13 @@ html,
 body {
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
     scroll-behavior: smooth;
 
-    background: linear-gradient(180deg, #D1FAFF, #1a67da);
+    background: linear-gradient(180deg, #001321, #1a0021);
+    /* Free SVG Backgrounds and Patterns by SVGBackgrounds.com */
+    background-image: url(images/sun-tornado.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
     font-family: Roboto Slab, sans-serif;
     font-size: 16px;
 }
@@ -62,9 +65,10 @@ header {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    position: sticky;
 
     background: var(--blue);
-    box-shadow: darkgray 0.5px 0.5px 0.5px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0.5px 0.5px 0.5px;
 }
 
 .navbar a {
@@ -140,15 +144,16 @@ header {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin: 5rem auto;
-    max-width: 90%;
+    padding: 2rem;
+    padding-top: 5rem;
 }
 
 .intro-portrait {
-    width: 600px;
+    width: 400px;
     margin: auto;
 
-    border-radius: 0.5rem;
+    border-radius: 50%;
+    box-shadow: 0 0 5px 5px rgba(50, 50, 50, 0.25);
 }
 
 @media (max-width: 768px) {
@@ -174,12 +179,13 @@ header {
     -webkit-transform: scale(1.2);
 }
 
-.intro-socials a+a {
+.intro-socials a + a {
     margin-left: 2rem;
 }
 
 .intro-text {
     text-wrap: wrap;
+    text-shadow: 3px 3px 1px rgba(3, 3, 0, 0.35)
 }
 
 .intro-text span {
@@ -197,6 +203,49 @@ header {
 .about-text {
     margin: auto;
     max-width: 90%;
+}
+
+
+/* || Projects */
+.project-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    max-width: 320px;
+    margin: 2rem;
+    padding: 2rem;
+
+    background: white;
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 20px 20px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    color: black;
+
+    transition: transform 0.3s ease;
+}
+
+.project:hover {
+    transform: rotate(1deg) scale(1.02);
+}
+
+.project-thumbnail img {
+    width: 320px;
+    border-radius: 1rem;
+}
+
+.project-thumbnail:hover {
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .project {
+        margin: 1rem;
+        padding: 1rem;
+    }
 }
 
 
@@ -266,49 +315,6 @@ header {
 
     100% {
         left: 100%;
-    }
-}
-
-
-/* || Projects */
-.project-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.project {
-    display: flex;
-    flex-direction: column;
-    max-width: 320px;
-    margin: 2rem;
-    padding: 2rem;
-
-    background: white;
-    border-radius: 1rem;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 20px 20px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    color: black;
-
-    transition: transform 0.3s ease;
-}
-
-.project:hover {
-    transform: rotate(1deg) scale(1.02);
-}
-
-.project-thumbnail img {
-    width: 320px;
-    border-radius: 1rem;
-}
-
-.project-thumbnail:hover {
-    cursor: pointer;
-}
-
-@media (max-width: 768px) {
-    .project {
-        margin: 1rem;
-        padding: 1rem;
     }
 }
 
@@ -385,12 +391,18 @@ header {
 
 
 /* || Contact */
-form {
+.contact-form {
     display: flex;
     flex-direction: column;
-    margin: auto; 
+    margin: auto;
+    padding: 2rem;
     width: 40rem;
     max-width: 90%;
+
+    background: #618de7;
+    border-radius: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    color: black;
 }
 
 input,
@@ -421,4 +433,10 @@ button {
 
 button:hover {
     background: #223d80;
+}
+
+@media (max-width: 425px) {
+    .contact-form {
+        padding: 1rem;
+    }
 }
