@@ -31,6 +31,10 @@ img {
     font-weight: bold;
 }
 
+.hidden {
+    display: none;
+}
+
 .popout {
     opacity: 0;
     transform: scale(0);
@@ -125,6 +129,40 @@ header {
 .navbar-title {
     margin-left: 2rem;
     font-size: 32px;
+}
+
+.language-menu-wrapper {
+    display: inline-block;
+}
+
+.language-toggle {
+    margin: 0 1rem;
+    padding: 0;
+    background: none;
+    font-size: 1.5rem;
+}
+
+.language-dropdown {
+    min-width: 120px;
+    position: absolute;
+    padding: 0.5rem 0;
+    right: 0;
+    z-index: 999;
+
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.language-dropdown a {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: var(--blue);
+    text-decoration: none;
+}
+
+.language-dropdown a:hover {
+    background-color: #f0f0f0;
 }
 
 .menu-toggle {

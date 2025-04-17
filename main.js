@@ -40,3 +40,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     fills.forEach(fill => fillObserver.observe(fill));
 });
+
+
+document.querySelector('.language-toggle').addEventListener('click', () => {
+    document.querySelector('.language-dropdown').classList.toggle('hidden');
+  });
+  
