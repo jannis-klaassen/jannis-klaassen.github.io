@@ -67,6 +67,8 @@ img {
 
     font-size: 3rem;
     text-align: center;
+
+    text-shadow: 2px 2px 1px rgba(3, 3, 0, 0.35)
 }
 
 
@@ -164,6 +166,8 @@ header {
     align-items: center;
     padding: 2rem;
     padding-top: 5rem;
+
+    text-shadow: 2px 2px 1px rgba(3, 3, 0, 0.35)
 }
 
 .intro-portrait {
@@ -203,7 +207,6 @@ header {
 
 .intro-text {
     text-wrap: wrap;
-    text-shadow: 3px 3px 1px rgba(3, 3, 0, 0.35)
 }
 
 .intro-text span {
@@ -213,14 +216,11 @@ header {
 
 
 /* || About */
-.about {
-    display: flex;
-    justify-content: space-around;
-}
-
 .about-text {
     margin: auto;
     max-width: 90%;
+
+    text-shadow: 2px 2px 1px rgba(3, 3, 0, 0.35)
 }
 
 
@@ -287,6 +287,8 @@ header {
 .skill label {
     display: block;
     margin-bottom: 0.3rem;
+
+    text-shadow: 2px 2px 1px rgba(3, 3, 0, 0.35)
 }
 
 .bar {
