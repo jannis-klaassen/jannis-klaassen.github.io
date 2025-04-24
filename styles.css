@@ -266,6 +266,71 @@ header {
     }
 }
 
+.project-stack {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: end;
+    height: 100%;
+}
+
+.tech-tag {
+    margin-right: 0.5rem;
+    margin-top: 0.5rem;
+    padding: 0.3rem 0.5rem;
+
+    border-radius: 0.5rem;
+    color: white;
+    font-size: 1rem;
+}
+
+.tech-blender {
+    background: #1fba62;
+}
+
+.tech-csharp {
+    background: #5934d6;
+}
+
+.tech-flask {
+    background: #3aa9bf;
+}
+
+.tech-java {
+    background: #ec2025;
+}
+
+.tech-js {
+    background: #f7de1f;
+}
+
+.tech-photoshop {
+    background: #b42ba4;
+}
+
+.tech-python {
+    background: #346c99;
+}
+
+.tech-spigot {
+    background: #ed8b1c;
+}
+
+.tech-sqlite {
+    background: #1d947e;
+}
+
+.tech-tkinter {
+    background: #808080;
+}
+
+.tech-unity {
+    background: #1c1c1c;
+}
+
+.tech-web {
+    background: #e44d26;
+}
+
 
 /* || Skills */
 .skills {
