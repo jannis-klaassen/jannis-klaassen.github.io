@@ -31,6 +31,11 @@ img {
     font-weight: bold;
 }
 
+.hidden {
+    opacity: 0;
+    transform: scale(0);
+}
+
 .popout {
     opacity: 0;
     transform: scale(0);
@@ -191,6 +196,7 @@ header {
 
 .intro-socials {
     display: flex;
+    margin-top: 2rem;
 }
 
 .intro-socials img {
@@ -209,7 +215,8 @@ header {
     text-wrap: wrap;
 }
 
-.intro-text span {
+.intro-name {
+    margin: 0;
     font-size: 3rem;
     font-weight: bold;
 }
