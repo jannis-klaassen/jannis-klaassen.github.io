@@ -44,28 +44,40 @@ document.addEventListener("DOMContentLoaded", () => {
     // INTRO ANIMATION
     const introText = document.querySelector(".intro-text");
     const introSocials = document.querySelectorAll(".intro-socials a");
+    const aboutSegment = document.querySelector(".about");
     const aboutText = document.querySelector(".about-text");
 
     // To avoid layout shifting
     lockElementSize(introText);
-    lockElementSize(document.querySelector(".about"));
+    lockElementSize(aboutSegment);
 
     (async () => {
+        introText.classList.add("hidden");
         await delay(1000);
-        await typeParagraphs(introText, 30);
-        await delay(500);
+
+        await typeParagraphs(introText, 40);
+        unlockElementSize(introText);
+        await delay(700);
+
         await animateIcons(introSocials);
         await delay(1500);
+
         await typeParagraphs(aboutText);
+        unlockElementSize(aboutSegment);
     })();
 });
 
 
-async function animateIcons(container) {
-    container.forEach(icon => {
-        icon.classList.remove("hidden");
-        icon.classList.add("popout-animation");
-    });
+function lockElementSize(element) {
+    const { width, height } = element.getBoundingClientRect();
+    element.style.width = `${width}px`;
+    element.style.height = `${height}px`;
+}
+
+
+function unlockElementSize(element) {
+    element.style.width = "";
+    element.style.height = "";
 }
 
 
@@ -74,9 +86,11 @@ function delay(ms) {
 }
 
 
-function lockElementSize(element) {
-    element.style.minWidth = `${element.offsetWidth}px`;
-    element.style.minHeight = `${element.offsetHeight}px`;
+async function animateIcons(container) {
+    container.forEach(icon => {
+        icon.classList.remove("hidden");
+        icon.classList.add("popout-animation");
+    });
 }
 
 
@@ -93,11 +107,11 @@ async function typeParagraphs(container, typingSpeed = 20, delayTime = 400) {
             await delay(delayTime);
         }
     }
+}
 
-    async function typeParagraph(p, text, typingSpeed) {
-        for (let i = 1; i <= text.length; i++) {
-            p.textContent = text.slice(0, i);
-            await delay(typingSpeed);
-        }
+async function typeParagraph(p, text, typingSpeed) {
+    for (let i = 1; i <= text.length; i++) {
+        p.textContent = text.slice(0, i);
+        await delay(typingSpeed);
     }
 }
