@@ -1,16 +1,14 @@
-/* || Variables */
+/* || VARIABLES */
 :root {
     --blue: #152651;
 }
 
 
-/* || CSS Reset */
+/* || CSS RESET */
 html,
 body {
     margin: 0;
     padding: 0;
-    scroll-behavior: smooth;
-
     background: linear-gradient(180deg, #001321, #1a0021);
     /* Free SVG Backgrounds and Patterns by SVGBackgrounds.com */
     background-image: url(images/sun-tornado.svg);
@@ -18,6 +16,7 @@ body {
     background-size: cover;
     font-family: Roboto Slab, sans-serif;
     font-size: 16px;
+    scroll-behavior: smooth;
 }
 
 img {
@@ -26,7 +25,7 @@ img {
 }
 
 
-/* || General Utility */
+/* || GENERAL UTILITY */
 .bold {
     font-weight: bold;
 }
@@ -47,32 +46,45 @@ img {
 }
 
 @keyframes popout {
-    from {transform:scale(0)}
-    80% {transform:scale(1.05)}
-    to {transform:scale(1)}
+    from {
+        transform: scale(0)
+    }
+
+    80% {
+        transform: scale(1.05)
+    }
+
+    to {
+        transform: scale(1)
+    }
 }
 
 @-webkit-keyframes popout {
-    from {-webkit-transform:scale(0)}
-    80% {-webkit-transform:scale(1.05)}
-    to {-webkit-transform:scale(1)}
+    from {
+        -webkit-transform: scale(0)
+    }
+
+    80% {
+        -webkit-transform: scale(1.05)
+    }
+
+    to {
+        -webkit-transform: scale(1)
+    }
 }
 
 .segment {
     max-width: 1400px;
     margin: auto;
     padding: 1rem;
-
     color: white;
     font-size: 1.2rem;
 }
 
 .segment h1 {
     margin-top: 4rem;
-
     font-size: 3rem;
     text-align: center;
-
     text-shadow: 2px 2px 1px rgba(3, 3, 0, 0.35);
 }
 
@@ -91,7 +103,6 @@ header {
     justify-content: space-between;
     flex-wrap: wrap;
     position: sticky;
-
     background: var(--blue);
     box-shadow: rgba(0, 0, 0, 0.25) 0.5px 0.5px 0.5px;
 }
@@ -99,11 +110,10 @@ header {
 .navbar a {
     position: relative;
     margin: 0.5rem;
-    transition: color 0.2s ease;
-
     color: white;
     font-size: 24px;
     text-decoration: none;
+    transition: color 0.2s ease;
 }
 
 .navbar a::before,
@@ -138,7 +148,6 @@ header {
     display: none;
     margin: 1rem;
     padding: 0;
-
     background: none;
     box-shadow: none;
     font-size: 1.5rem;
@@ -157,7 +166,6 @@ header {
 
     .navbar-pages.active {
         display: flex;
-
         background-color: #223b79;
     }
 }
@@ -171,14 +179,12 @@ header {
     align-items: center;
     padding: 2rem;
     padding-top: 5rem;
-
     text-shadow: 2px 2px 1px rgba(3, 3, 0, 0.35)
 }
 
 .intro-portrait {
     width: 400px;
     margin: auto;
-
     border-radius: 50%;
     box-shadow: 0 0 5px 5px rgba(50, 50, 50, 0.25);
 }
@@ -207,7 +213,7 @@ header {
     -webkit-transform: scale(1.2);
 }
 
-.intro-socials a + a {
+.intro-socials a+a {
     margin-left: 2rem;
 }
 
@@ -224,9 +230,8 @@ header {
 
 /* || About */
 .about-text {
-    margin: auto;
     max-width: 90%;
-
+    margin: auto;
     text-shadow: 2px 2px 1px rgba(3, 3, 0, 0.35)
 }
 
@@ -244,12 +249,10 @@ header {
     max-width: 320px;
     margin: 2rem;
     padding: 2rem;
-
     background: white;
     border-radius: 1rem;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 20px 20px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     color: black;
-
     transition: transform 0.3s ease;
 }
 
@@ -284,7 +287,6 @@ header {
     margin-right: 0.5rem;
     margin-top: 0.5rem;
     padding: 0.3rem 0.5rem;
-
     border-radius: 0.5rem;
     color: white;
     font-size: 1rem;
@@ -346,10 +348,10 @@ header {
 }
 
 .skill-set {
+    max-width: 90%;
+    width: 600px;
     margin: auto;
     padding: 1rem;
-    width: 600px;
-    max-width: 90%;
 }
 
 .skill {
@@ -359,23 +361,21 @@ header {
 .skill label {
     display: block;
     margin-bottom: 0.3rem;
-
     text-shadow: 2px 2px 1px rgba(3, 3, 0, 0.35)
 }
 
 .bar {
+    position: relative;
+    right: 10px;
     width: 100%;
     height: 2rem;
     scale: 97%;
-    position: relative;
-    right: 10px;
     overflow: hidden;
-    transition: transform 0.3s ease;
-    will-change: transform;
-
     background: white;
     border-radius: 0.5rem;
     box-shadow: rgba(0, 0, 0, 0.35) 5px 5px 10px;
+    transition: transform 0.3s ease;
+    will-change: transform;
 }
 
 .bar:hover {
@@ -386,17 +386,15 @@ header {
     width: 0;
     height: 100%;
     overflow: hidden;
-    transition: width 1s ease-out;
-
     background: linear-gradient(to right, var(--blue), rgb(32, 101, 190));
+    transition: width 1s ease-out;
 }
 
 .bar:hover .fill::after {
     content: '';
+    position: absolute;
     width: 70%;
     height: 100%;
-    position: absolute;
-
     background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.1), transparent);
     animation: shimmer 1.5s infinite;
 }
@@ -440,19 +438,17 @@ header {
 
 .flip-card-front,
 .flip-card-back {
-    backface-visibility: hidden;
     position: absolute;
-
+    backface-visibility: hidden;
     box-shadow: 0 0 5px 5px rgba(50, 50, 50, 0.25);
 }
 
 .flip-card-back {
     box-sizing: border-box;
     padding: 2rem;
-    transform: rotateY(180deg);
-
     background-color: #3a3a3a;
     font-size: 1.2rem;
+    transform: rotateY(180deg);
 }
 
 .flip-card-back p {
@@ -463,9 +459,9 @@ header {
 .flip-card-frame,
 .flip-card-front,
 .flip-card-back,
-.flip-card-front > img {
-    height: 100%;
+.flip-card-front>img {
     width: 100%;
+    height: 100%;
     border-radius: 2rem;
 }
 
@@ -476,7 +472,6 @@ header {
 
     .flip-card-back {
         padding: 1rem;
-        
         line-height: 1.5;
         font-size: 1rem;
     }
@@ -487,11 +482,10 @@ header {
 .contact-form {
     display: flex;
     flex-direction: column;
+    max-width: 90%;
+    width: 40rem;
     margin: auto;
     padding: 2rem;
-    width: 40rem;
-    max-width: 90%;
-
     background: #618de7;
     border-radius: 2rem;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
@@ -502,26 +496,24 @@ input,
 textarea {
     margin: 1rem 0;
     padding: 6px 12px;
-
+    border: none;
+    border-radius: 0.5rem;
     font-family: Roboto Slab, sans-serif;
     font-size: 18px;
     line-height: 1.5;
-    border: none;
-    border-radius: 0.5rem;
 }
 
 button {
     margin: 1rem auto;
     padding: 0.5rem 1.5rem;
-
     background: var(--blue);
-    color: white;
     border: none;
     border-radius: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     cursor: pointer;
+    color: white;
     font-family: Roboto Slab, sans-serif;
     font-size: 18px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 button:hover {
