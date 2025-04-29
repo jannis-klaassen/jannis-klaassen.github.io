@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
         introText.classList.add("hidden");
         await delay(1000);
 
-        await typeParagraphs(introText, 20);
+        await typeParagraphs(introText);
         unlockElementSize(introText);
         await delay(700);
 
