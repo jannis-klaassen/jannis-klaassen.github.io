@@ -413,7 +413,7 @@ header {
 /* || Interests */
 .interests {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
     max-width: 100%;
@@ -484,7 +484,7 @@ header {
     flex-direction: column;
     max-width: 90%;
     width: 40rem;
-    margin: auto;
+    margin: 4rem auto;
     padding: 2rem;
     background: #618de7;
     border-radius: 2rem;
@@ -504,7 +504,8 @@ textarea {
 }
 
 button {
-    margin: 1rem auto;
+    margin: auto;
+    margin-top: 2rem;
     padding: 0.5rem 1.5rem;
     background: var(--blue);
     border: none;
