@@ -55,14 +55,14 @@ document.addEventListener("DOMContentLoaded", () => {
         introText.classList.add("hidden");
         await delay(1000);
 
-        await typeParagraphs(introText, 40);
+        await typeParagraphs(introText, 20);
         unlockElementSize(introText);
         await delay(700);
 
         await animateIcons(introSocials);
         await delay(1500);
 
-        await typeParagraphs(aboutText);
+        await typeParagraphs(aboutText, 10);
         unlockElementSize(aboutSegment);
     })();
 });
