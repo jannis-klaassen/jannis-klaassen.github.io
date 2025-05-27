@@ -238,14 +238,6 @@ header {
 }
 
 
-/* || ABOUT */
-.about-text {
-    max-width: 90%;
-    margin: auto;
-    text-shadow: 2px 2px 1px rgba(3, 3, 0, 0.35)
-}
-
-
 /* || PROJECTS */
 .project-container {
     display: flex;

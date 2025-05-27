@@ -44,12 +44,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // INTRO ANIMATION
     const introText = document.querySelector(".intro-text");
     const introSocials = document.querySelectorAll(".intro-socials a");
-    const aboutSegment = document.querySelector(".about");
-    const aboutText = document.querySelector(".about-text");
 
     // To avoid layout shifting
     lockElementSize(introText);
-    lockElementSize(aboutSegment);
 
     (async () => {
         introText.classList.add("hidden");
@@ -61,9 +58,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         await animateIcons(introSocials);
         await delay(1500);
-
-        await typeParagraphs(aboutText, 10);
-        unlockElementSize(aboutSegment);
     })();
 });
 
