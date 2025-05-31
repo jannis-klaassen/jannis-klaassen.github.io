@@ -301,10 +301,6 @@ header {
     border-radius: 1rem;
 }
 
-.project-thumbnail:hover {
-    cursor: pointer;
-}
-
 @media (max-width: 768px) {
     .project {
         margin: 1rem;
