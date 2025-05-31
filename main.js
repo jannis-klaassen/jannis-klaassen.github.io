@@ -8,6 +8,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
+    // NAVBAR CHANGE LANGUAGE
+    document.querySelector('.language-toggle').addEventListener('click', () => {
+        document.querySelector('.language-dropdown').classList.toggle('hidden');
+    });
+
+
     // ANIMATE POPOUTS
     const popoutElements = document.querySelectorAll(".popout");
     const popoutObserver = new IntersectionObserver((entries, observer) => {
